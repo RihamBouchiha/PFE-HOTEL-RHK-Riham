@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/mainRiham1.css">
+  <link rel="website icon" type="png" href="css/imagesRiham1/WhatsApp Image 2024-02-15 à 15.59.26_04ca0a07.jpg">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script defer src="js/mainContact.js"></script>
+  <title>Contactez-nous</title>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="hotel-nom">RHK Hôtel</div>
+      <nav>
+        <ul>
+            <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+            <li class="home"><a href="/riham/indexRiham1.html#section3">Qui sont RHK?</a></li>
+            <li class="home"><a href="/riham/indexRiham1.html#section4">Spa</a></li>
+            <li class="home"><a href="#">Réstauration</a></li>
+            <li class="home"><a href="/kaouthar/indexSalle.html">Salle</a></li>
+            <li class="home"><a href="/riham/indexContact.html">Contactez-nous</a></li> 
+        </ul>
+    </nav>
+      <div class="reservationbtn">
+        <a href="#">Réserver une chambre</a>
+      </div>
+    </div>
+  </header>
+  
+  <section id="section2">
+    <div class="section2-content">
+      
+        <div class="image-content">
+            <div class="slideshow-image-overlay"></div>
+            <img class="slideshow-image" src="css/imagesRiham1/table.jpg" alt="Image 1">
+            <img class="slideshow-image" src="css/imagesRiham1/piscine.jpg" alt="Image 2">
+            <img class="slideshow-image" src="css/imagesRiham1/une4.jpg" alt="Image 3">
+        </div>
+        
+    </div>
+</section>
+  <section id="section5">
+    <div class="section5-content">
+        <div class="image-content">
+            <img src="css/imagesRiham1/fes.jpg" alt="Image Restauration">
+        </div>
+        <div class="text-content5">
+            <h1>Contactez-nous</h1>
+             <p>T°:+212 691743812</p>
+            <p>F°:+212 591743812</p>
+            <p>E : info @ rhk - hotel . com</p>
+        </div>
+    </div>
+  </section>
+  <section class="section6">
+    <div class="container">
+      <div class="text-content6"> 
+        <h2>Pour nous contacter</h2>
+        <p>Veuillez remplir le formulaire suivant pour nous contacter :</p>
+        <form id="contact-form" onsubmit="validFormulaire(event)">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="sujet">Sujet </label>
+              <select class="form-control" id="sujet">
+                <option value="plainte">Plainte</option>
+                <option value="réservation">Réservation</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="titre">Titre </label>
+              <select class="form-control" id="titre">
+                <option value="M.">M.</option>
+                <option value="Mme">Mme.</option>
+                <option value="Mlle">Mlle.</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="prenom">Prénom </label>
+              <input type="text" class="form-control" id="prenom" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nom">Nom </label>
+              <input type="text" class="form-control" id="nom" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email </label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="telephone">Téléphone </label>
+              <input type="text" class="form-control" id="telephone">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pays">Pays </label>
+              <select class="form-control" id="pays">
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="commentaires">Commentaires </label>
+              <textarea class="form-control" id="commentaires" rows="3" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: #9d7b2a; color: #000000d6;"><i class="fas fa-paper-plane" style="color: #000000d6;"></i> Nous contacter</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <script>
+      $(document).ready(function() {
+        $.ajax({
+          url: 'https://restcountries.com/v3.1/all',
+          dataType: 'json',
+          success: function(data) {
+            data.sort(function(a, b) {
+              if (a.name.common < b.name.common) return -1;
+              if (a.name.common > b.name.common) return 1;
+              return 0;
+            });
+            for (var i = 0; i < data.length; i++) {
+              $('#pays').append('<option value="' + data[i].name.common + '">' + data[i].name.common + '</option>');
+            }
+          }
+        });
+      });
+    </script>
+    
+  </section>
+  <br>
+<section class="section7">
+ <div class="aller-en-haut">
+  <h4 class="fleche">🡩</h4>
+  <br>  <br>
+  <h5>Aller en haut</h5>
+</div> 
+</section>
+</body>
+<footer>
+  <section class="section8">
+    <div class="div-fin">
+      <h2 class="hotel-nom1" id="hotelText">RHK Hotel</h2>
+      <div class="fin">
+        <h4>T°:+212 691743812</h4>
+        <h4>F°:+212 591743812</h4>
+        <h4>E : info @ rhk - hotel . com</h4>
+      </div>
+    </div>
+    <div class="privacy-policy">
+      <p>Politique de confidentialité</p>
+    </div>
+  </section>
+
+</footer>
+</html>

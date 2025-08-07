@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styleKaouthar.css"> 
+    <link rel="stylesheet" href="css/styleKaouthar1.css">
+    <link rel="stylesheet" href="css/styleSalle.css">
+
+  <link rel="website icon" type="png" href="css/imageKa/icon.jpeg">
+    
+    <script src="js/mainKaouthr.js" defer type="text/javascript"></script>
+
+    <title>Réservation d'hôtel</title>
+  </head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="hotel-nom">RHK Hôtel</div>
+      <nav>
+        <ul>
+          <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section3">Qui sont RHK?</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section4">Spa</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section5">Réstauration</a></li>
+          <li class="home"><a href="#">salle </a></li>
+          <li class="home"><a href="#">Contactez-nous</a></li> 
+        </ul>
+      </nav>
+      <div class="reservationbtn">
+        </div>
+    </div>
+  </header>
+  
+ <body>
+  
+  <section id="section2">
+    <div class="section2-content">
+        <div class="image-content">
+            <div class="slideshow-image-overlay"></div>
+            <img class="slideshow-image" src="css/imageKa/table.jpg" alt="Image 1">
+          </div>
+        
+    </div>
+</section>
+
+  <section class="sectionReser ReservationSection">
+    
+    
+    <form action="http://localhost:5502/reserver-chambre" method="post" class="ReservationForm" id="reservationForm">
+
+      <div class="inputResrvation">
+        <span><i class="ri-calendar-2-fill"></i></span>
+        <div>
+          <label for="check-in">Date Arrivée</label>
+          <input type="text" id="date_arrivee" name="date_arrivee" placeholder="Date Arrivée" required>
+         </div>
+        </div>
+      
+      <div class="inputResrvation">
+        <span><i class="ri-calendar-2-fill"></i></span>
+        <div>
+          <label for="check-out">Départ</label>
+          <input type="text" id="date_depart" name="date_depart" placeholder="Date Départ" required>
+         </div>
+      
+      </div>
+      <hr class="">
+      <div class="inputResrvation">
+        <span><i class="ri-user-fill"></i></span>
+        <div>
+          <label for="Nombre de Personnes">Nombre de Personnes </label>
+          <input id="nombres_parsonnes" type="number" name="nombrePersonnes" placeholder="Nombre de Personnes" min="1" required>
+        
+        </div> 
+      </div>
+   
+      <div class="inputResrvation">
+        <span><i class="fas fa-bed" style="color: #c0873ce9;"></i></span>
+        <div>
+          <label for="nombre_chambre">Nombre de chambres</label>
+          <select id="nombre_chambre" name="nombre_chambre" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+               </select>
+      </div>
+      
+      </div>
+      <div id="errorMessages"></div>
+      
+    </form>
+    <div class="virification" id="verificationMessageDateDepart"></div>
+      <div  class="virification" id="verificationMessageDateArrivee"></div>  
+      <div class="virification" id="verificationMessageNombrePersonnes"></div>
+       
+      
+  </section>
+  
+  <section class="chambres">
+    <h3 class="selectCHambre">Sélectionner une chambre</h3>
+    <div id="chambres-container"></div>
+  </section>
+
+  <!-- <section class="chambres">
+    <h3 class="selectCHambre">Sélectionner une chambre</h3>
+
+    <div class="chambre" data-id="1">
+      <img src="css/imageKa/ch4.jpg" alt="Chambre Classique">
+      <div class="infos">
+        <h3>La Classique</h3>
+        <ul>
+        <li>1 Lit double – Entre 30 et 35m²</li>
+        <li>Décoration raffinée dans un style traditionnel marocain</li></ul>
+        <button class="h4"><a href="http://127.0.0.1:5502/kaouthar/indexKaouthar1.html">Découvrez plus➙</a></button>
+        <hr class="separator">
+        <h4 class="h_4" >Meilleur Tarif Flexible - Réservez dès maintenant!</h4>
+        <P class="align-right">2 550,00 MAD <BR>Par nuit</P>
+        <div class="BtnContainer">
+        <div class="inputResrvation input__btn">
+          <button type="button" class="btn" onclick="validateForm()">Réserver maintenant</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="chambre" data-id="2">
+      <img src="css/imageKa/ch2.jpg" alt="Chambre Classique">
+      <div class="infos">
+        <h3>Chambre Deluxe Supérieure</h3>
+        <ul>
+        <li>1 Lit King – Entre 35 et 45m²</li>
+        <li>Vue sur le jardin intérieur, le riad traditionnel ou le patio andalou</li></ul>
+        <button class="h4"><a href="http://127.0.0.1:5502/kaouthar/indexKaouthar1.html">Découvrez plus➙</a></button>
+        <hr class="separator">
+        <h4 class="h_4" >Meilleur Tarif Flexible - Réservez dès maintenant!</h4>
+        <P class="align-right">3950,00 MAD <BR>Par nuit</P>
+          <div class="BtnContainer">
+          <div class="inputResrvation input__btn">
+            <button id="BtnReserver" type="button" class="btn" onclick="validateForm()">Réserver maintenant</button>
+          </div></div>
+      </div>
+    </div>
+
+    <div class="chambre" data-id="3">
+      <img src="css/imageKa/cha3.jpg" alt="Chambre Classique">
+      <div class="infos">
+        <h3>Chambre Deluxe</h3>
+        <ul>
+        <li>1 Lit King – Entre 30 et 36m²</li>
+        <li>Décoration raffinée alliant style traditionnel marocain et style contemporain</li></ul>
+        <button class="h4"><a href="http://127.0.0.1:5502/kaouthar/indexKaouthar1.html">Découvrez plus➙</a></button>
+        <hr class="separator">
+        <h4 class="h_4" >Meilleur Tarif Flexible - Réservez dès maintenant!</h4>
+        <P class="align-right">4050,00 MAD <BR>Par nuit</P>
+          <div class="BtnContainer">
+          <div class="inputResrvation input__btn">
+            <button type="button" class="btn" onclick="validateForm()">Réserver maintenant</button>
+          </div>  </div>
+      </div>
+    </div>
+
+    <div class="chambre" data-id="4">
+      <img src="css/imageKa/ch1.jpg" alt="Chambre Classique">
+      <div class="infos">
+        <h3>Chambre Ambassadeur</h3>
+        <ul>
+        <li>1 Lit Queen – Environ 50m²</li>
+        <li>Vue sur le patio ou le jardin intérieur</li></ul>
+        <button class="h4"><a href="http://127.0.0.1:5502/kaouthar/indexKaouthar1.html">Découvrez plus➙</a></button>
+           <hr class="separator">
+        <h4 class="h_4" >Meilleur Tarif Flexible - Réservez dès maintenant!</h4>
+        <P class="align-right">5000,00 MAD <BR>Par nuit</P>
+          <div class="BtnContainer">
+        <div class="inputResrvation input__btn">
+          <button type="button" class="btn" onclick="validateForm()">Réserver maintenant</button>
+        </div> </div>
+      </div>
+    </div>
+  </section> -->
+
+   <section class="sectionBien">
+    <div class="aller-en-haut">
+      <h3 class="fleche"> RHK HOTEL</h3>
+      <div class="separator1"></div>
+      <h3>Hôtel de luxe, au Maroc</h3>
+      <div class="services">
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-61ag1wlocc6yd3ufd8fvoprt/wifi.svg" alt="WIFI Gratuit">
+          <p class="p1">WIFI Gratuit</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-1am2tbd2xweqr4zqwvhq9azvf/spa.svg" alt="Spa et Salle de Fitness">
+          <p  class="p1" >Spa et Salle de Fitness</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-acksrekzyraj8z7ffzz1t67u7/luggage.svg" alt="Service Conciergerie">
+          <p  class="p1" >Service Conciergerie</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-envmhdlhhcbrwode7hzgizjt8/pool.svg" alt="Piscine">
+          <p  class="p1" >Piscine</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-88frz57oddbeph5poxtkvnih7/shower-in-bath.svg" alt="Salle de bain">
+          <p  class="p1" >Salle de bain </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sectionSuivi">
+    <br>
+    <div class="text-content6"> 
+      <h3>Suivez nous !</h3>
+      <p>Restez connecté avec nous sur les réseaux sociaux pour les dernières mises à jour.</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/rhkhotel/"><i class="fa fa-instagram"></i></a>
+      <a href="https://x.com/AzzouzyHib16510?t=vSrocXFXF713clCOgx3XMQ&s=09"><i class="fa fa-twitter"></i></a>
+      <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+      <di><br></di>
+      <br>
+    </div>
+</section>
+
+<section class="section9">
+  <div class="aller-en-haut">
+   <h4 class="fleche"></h4>
+   <h5></h5>
+ </div> 
+ </section>
+
+   <section class="section8">
+     <div class="div-fin">
+       <h2 class="hotel-nom1" id="hotelText">RHK Hotel</h2>
+       <div class="fin">
+         <h5>T°:+212 691743812</h5>
+         <h5>F°:+212 591743812</h5>
+         <h5>E : info @ rhk - hotel . com</h5>
+       </div>
+     </div>
+     <div class="privacy-policy">
+      <br>
+      <p><a href="http://127.0.0.1:5502/riham/indexRiham2.html">Politique de confidentialité</a></p>
+
+     </div>
+   </section>
+   
+  
+
+</body>
+</html>

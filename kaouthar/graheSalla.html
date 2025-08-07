@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphique des réservations par période</title>
+  <!-- Inclure la bibliothèque Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Inclure le CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #reservationTypeChart {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+</head>
+<body>
+  <h1>Graphique des réservations par type</h1>
+  <!-- Canevas pour le graphique -->
+  <canvas id="reservationTypeChart" width="800" height="400"></canvas>
+  <div class="container">
+    <a href="javascript:history.go(-1)" class="btn btn-primary">Gestion des réservations salles</a>
+  </div>
+  <!-- Script pour récupérer et afficher les données -->
+  <script>
+     fetch('http://localhost:5502/reservations-sallet')
+      .then(response => response.json())
+      .then(data => {
+        const types = data.map(item => item.type);
+        const counts = data.map(item => item.count);
+        
+        // Créer le graphe
+        const ctx = document.getElementById('reservationTypeChart').getContext('2d');
+        const reservationTypeChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: types,
+            datasets: [{
+              label: 'Nombre de réservations par type',
+              data: counts,
+              backgroundColor: ['#FF6384', '#36A2EB'], // Couleurs pour chaque type
+              borderColor: ['#FF6384', '#36A2EB'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                  precision: 0 // Afficher uniquement des entiers sur l'axe Y
+                }
+              }]
+            }
+          }
+        });
+      })
+      .catch(error => console.error('Erreur lors de la récupération des données:', error));
+  </script>
+</body>
+</html>

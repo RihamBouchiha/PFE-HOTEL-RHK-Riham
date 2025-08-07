@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations de chambre par jour</title>
+    <!-- Ajoutez les liens vers les bibliothèques Chart.js et Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- Créez un canvas pour le graphe -->
+    <canvas id="chart-2"></canvas>
+
+    <script>
+        // Récupérer la date actuelle
+        const today = moment();
+        // Calculer la date de début de la semaine en soustrayant le numéro du jour actuel moins 1
+        const startOfWeek = today.clone().startOf('week');
+        // Créer un tableau pour stocker les dates de la semaine
+        const datesOfWeek = [];
+        // Ajouter chaque jour de la semaine au tableau
+        for (let i = 0; i < 7; i++) {
+            const date = startOfWeek.clone().add(i, 'days');
+            datesOfWeek.push(date.format('YYYY-MM-DD'));
+        }
+
+        // Graphe pour les réservations de chambre par jour
+        fetch('http://localhost:5502/reservations-par-jour')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la récupération des données depuis /reservations-par-jour');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const reservationsChambreParJour = data.reservationsChambreParJour;
+                const ctx2 = document.getElementById("chart-2").getContext("2d");
+                const myChart2 = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: datesOfWeek, // Utiliser les dates de la semaine
+                        datasets: [{
+                            label: 'Réservations de chambre par jour',
+                            data: reservationsChambreParJour,
+                            fill: false,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données de réservation de chambre par jour :', error);
+            });
+    </script>
+</body>
+</html>

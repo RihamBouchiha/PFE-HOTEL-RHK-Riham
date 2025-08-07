@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+
+
+
+/* section3 */
+#section3 {
+  background-color: #ebe6cb;
+  padding: 20px 0; 
+}
+
+.section3-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+/*  */
+.image-content-section3 {
+  flex: 1;
+  padding-left: 20px; 
+  order: 2;
+}
+
+.image-content-section3 img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 3s ease;
+}
+
+.image-content-section3 img.fade-out {
+  opacity: 0;
+}
+
+.text-content3 {
+  flex: 1;
+  padding-right: 20px; 
+  order: 1; 
+}
+
+.text-content3 h2 {
+  font-size: 2em; 
+  margin-bottom: 10px; 
+}
+
+.text-content3 p {
+  font-size: 1.2em; 
+  line-height: 1.5; 
+}
+
+/* section2 */
+.section2 {
+  background-color: #fff; 
+  padding: 50px 20px; 
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.section2 .wrapper {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.sectionCH  {
+  max-width: 1000px;
+  margin: 100px;
+  background-color: #fff;
+  padding: 100px;
+  box-shadow: 0 0 20px #a88534;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Advent Pro', Arial, sans-serif; 
+  overflow-x: hidden;
+    color: #a88534;
+}
+
+.card-logos img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.section2 .column-left,
+.section2 .column-right {
+  flex: 1; 
+  padding: 0 10px; 
+}
+
+.section2 h2 {
+  font-size: 24px; 
+  margin-bottom: 15px; 
+}
+
+.section2 ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.section2 ul li {
+  margin-bottom: 10px; 
+}

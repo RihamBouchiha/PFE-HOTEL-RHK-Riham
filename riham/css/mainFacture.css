@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+
+/*.payment-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .left-section {
+    width: 48%; 
+  }
+  
+  .right-section {
+    width: 48%; 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; 
+    margin: auto;
+  }
+  .payment-section form {
+    margin-bottom: -10px; 
+  }
+  
+  label {
+    margin-bottom: -4px;
+  }
+input {
+    padding: 8px;
+    margin-bottom: 200px;
+    
+    border: none; 
+    border-bottom: 3px solid #a88534; 
+    outline: none; 
+  }*/
+
+  .container {
+    font-family: 'Advent Pro', Arial, sans-serif;
+    
+}
+.payment-section,
+.reservation-section  {
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #a88534;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Advent Pro', Arial, sans-serif; 
+  overflow-x: hidden;
+    color: #a88534;
+}
+
+.card-logos img {
+  width: 40px;
+  margin-right: 10px;
+}
+.required-star {
+  color: red;
+  margin-left: 5px;
+}
+
+.form-group {
+  position: relative;
+}
+.section8 {
+  background-color: #292727;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 35vh;
+  margin-top: 30px; 
+}
+
+.div-fin {
+    text-align: center;
+    flex: 1; 
+    margin-left: 160px; 
+}
+
+
+.fin h4 {
+    transition: 0.3s;
+}
+
+.fin h4:hover {
+    color: #a88534;
+}
+
+.privacy-policy {
+    text-align: right;
+    margin-right: 20px;
+    margin-top:-15%; 
+}
+
+.privacy-policy p {
+    margin: 0;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.privacy-policy p:hover {
+    color: #a88534;
+}
+.privacy-policy {
+    cursor: pointer;
+}
+
+
+#hotelText {
+    cursor: pointer;
+}
+
+
+
+.hotel-nom1 {
+    color: #e8e7dc;
+    font-size: 1.8em;
+    font-family: Gabriola;
+}
+
+.fin {
+    color: #d1cdb7ca;
+}
+
+.prix{
+  margin-left: 190px; 
+}

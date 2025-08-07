@@ -1,0 +1,369 @@
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style de fond et de police */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    padding: 20px;
+  }
+  
+/* Conteneur principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: beige;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Ajout de la propriété pour centrer le contenu */
+}
+
+
+  /* Titre */
+  h1 {
+    margin-top: 80px;
+    color: #b7995d;
+    font-family: 'Alice', serif;
+    font-size: 70px; /* Augmenter la taille du texte */
+    font-weight: normal; /* Supprimer le gras */
+    line-height: 1.35;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Style des informations de réservation */
+  .container p {
+    margin-bottom: 15px;
+    color: #886e31;
+     font-weight: bold;
+  }
+  
+
+
+  /* Bordure inférieure pour chaque élément */
+  .container p:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  /* Style du texte en gras */
+  .container span {
+    color: black;
+  }
+  
+
+  
+  /*1111111111111*/
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+
+/*sectionSuivi*/
+.sectionSuivi {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.text-sectionSuivi {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.text-content6 h2 {
+  color: #000000; 
+  font-family: 'italic', serif; 
+}
+.social-icons {
+  width: 100%;
+  text-align:center;  
+}
+.social-icons a{
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.3em;
+  color: #000000;
+}
+.social-icons a:hover{
+  transform: scale(1.5);
+  transition: 0.9s;
+}
+
+/* section des servise de hotel  */
+.sectionBien {
+  background-color: #383636;
+  padding: 50px 0; 
+  text-align: center; 
+}
+
+.aller-en-haut {
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.fleche {
+  color: white;
+  font-size: 36px; 
+  margin-bottom: 10px; 
+}
+
+.services {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+.service {
+  margin: 20px; 
+}
+
+.service img {
+  width: 60px; 
+  height: 60px; 
+  margin-bottom: 10px; 
+}
+
+.service p {
+  margin: 0; 
+}
+h3{
+  color: #886e31;
+  font-family: Gabriola;
+}
+.p1{
+  color: white;
+  font-family: Gabriola;
+}
+
+.separator1{
+  width: 50px; 
+  height: 2px; 
+  background-color: #886e31; 
+  margin: 20px auto; 
+}
+
+
+.section8 {
+    background-color: #292727;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 35vh;
+}
+.div-fin {
+  text-align: center;
+  flex: 1;   margin-left: 160px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes monterDescendre {
+  0% {
+      transform: translateY(50px);
+  }
+  100% {
+      transform: translateY(15px);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Advent Pro', Arial, sans-serif; 
+    overflow-x: hidden;
+    
+    
+}
+
+/*la barre*/
+header {
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
+    color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    width: 97.8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 1500px;
+   
+}
+header.scrolled-down {
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    color: #000; 
+    padding: 5px;
+    width: 99.4%;
+
+}
+nav ul li a.scrolled-down {
+    color: #000; 
+}
+.reservationbtn a.scrolled-down {
+    background-color: #000; 
+    color: #fff; 
+    border-color: #daaa3ad6; 
+}
+.home a{
+  color: #fff; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.hotel-nom  {
+    font-size: 1.8em;
+    font-family: Gabriola; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2em; 
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff1f1;
+    transition: width 0.5s ease;
+    
+}
+.scrolled-down nav ul li a::after {
+    background-color: #000; 
+}
+
+
+nav ul li:hover a::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section8 {
+    background-color: #292727;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    margin-top: 30px; 
+  }
+  
+  .div-fin {
+      text-align: center;
+      flex: 1; 
+      margin-left: 160px; 
+  }
+  
+  
+  .fin h4 {
+      transition: 0.3s;
+  }
+  
+  .fin h4:hover {
+      color: #a88534;
+  }
+  
+  .privacy-policy {
+      text-align: right;
+      margin-right: 20px;
+      margin-top:-15%; 
+  }
+  
+  .privacy-policy p {
+      margin: 0;
+      color: #fff;
+      text-decoration: underline;
+  }
+  
+  .privacy-policy p:hover {
+      color: #a88534;
+  }
+  .privacy-policy {
+      cursor: pointer;
+  }
+  
+  
+  #hotelText {
+      cursor: pointer;
+  }
+  
+#downloadButton {
+  display: block;
+  margin: 0 auto; 
+  padding: 5px 20px;
+  background-color: #a88534; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#downloadButton:hover {
+  background-color: #a88534; 
+}
+
+  
+  .hotel-nom1 {
+      color: #e8e7dc;
+      font-size: 1.8em;
+      font-family: Gabriola;
+  }
+  
+  .fin {
+      color: #d1cdb7ca;
+  }
+  
+  .prix{
+    margin-left: 190px; 
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+  <script src="js/confrmationSpa.js" defer></script>
+  <link rel="stylesheet" href="css/confirmationSpa.css">
+  <link rel="stylesheet" href="css/mainRiham1.css">
+  <link rel="stylesheet" href="css/confirmationSpa.css">
+  <title>Confirmation de réservation</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+<body>
+    <header>
+        <div class="navbar">
+          <div class="hotel-nom">RHK Hotel</div>
+          <nav>
+            <ul>
+              <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+              <li class="home"><a href="/riham/indexRiham1.html#section3">Qui sont RHK?</a></li>
+              <li class="home"><a href="/riham/indexRiham1.html#section4">Spa</a></li>
+              <li class="home"><a href="/riham/indexRiham1.html#section5">Réstauration</a></li>
+              <li class="home"><a href="#">Capital Humain</a></li>
+              <li class="home"><a href="#">Contactez-nous</a></li> 
+            </ul>
+          </nav>
+          <div class="reservationbtn"></div>
+        </div>
+      </header>
+    <div id="section10">
+  <h1>Confirmation de votre réservation</h1>
+
+  <div  class="container">
+    <p>Nom: <span id="nomReservation"></span></p>
+    <p>Prénom: <span id="prenomReservation"></span></p>
+    <p>Date et heure de début: <span id="dateHeureDebutReservation"></span></p>
+    <p>Date et heure de fin: <span id="dateHeureFinReservation"></span></p>
+    <p>Jour: <span id="jourReservation"></span></p>
+    <p>Type: <span id="typeReservation"></span></p>
+    <span id="messageRemerciement" style="color:#886e31; font-family: 'Dancing Script', cursive;"></span>
+  </div>
+</div>  
+<br>
+<button id="downloadButton" class="custom-btn btn-1">Télécharger votre confirmation</button>
+
+</body>
+<footer>
+    <section class="section8">
+      <div class="div-fin">
+        <h2 class="hotel-nom1" id="hotelText">RHK Hotel</h2>
+        <div class="fin">
+          <h5>T°:+212 691743812</h5>
+          <h5>F°:+212 591743812</h5>
+          <h5>E : info @ rhk - hotel . com</h5>
+        </div>
+      </div>
+      <div class="privacy-policy">
+        <p>Politique de confidentialité</p>
+      </div>
+    </section>
+  </footer>
+</html>

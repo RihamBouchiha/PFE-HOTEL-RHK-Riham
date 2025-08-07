@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  
+    
+
+    <link rel="stylesheet" href="css/styleSalle.css">
+
+  <link rel="website icon" type="png" href="css/imageKa/icon.jpeg">
+    
+    <script src="js/mainNonDispo.js" defer type="text/javascript"></script>
+
+    <title>Réservation d'hôtel</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Section 2 Styles */
+#section2 {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.image-content {
+  position: relative;
+}
+
+.slideshow-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.slideshow-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Section Chambres Styles */
+.chambres {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.chambres p {
+  margin-bottom: 20px;
+}
+
+/* Section Bienvenue Styles */
+.sectionBien {
+  background-color: #5e5d5d;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.sectionBien h3 {
+  margin-bottom: 20px;
+  color: #f6f2f2;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service {
+  margin: 0 20px;
+}
+
+.service img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* Section Suivi Styles */
+.sectionSuivi {
+  background-color: #343a40;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    margin-top: 20px;
+  }
+  
+  .navbar ul li {
+    margin: 0 10px;
+  }
+  
+  .sectionBien .services {
+    flex-direction: column;
+  }
+  
+  .service {
+    margin: 0 0 20px 0;
+  }
+}
+/* Button Styles */
+.h4 a {
+  display: inline-block;
+  background-color: #a0a5a9;
+  color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.h4 a:hover {
+  background-color: #757a7e;
+}
+
+</style></st>
+  </head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="hotel-nom">RHK Hôtel</div>
+      <nav>
+        <ul>
+          <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+          <li class="about"><a href="#section3">Qui sont RHK?</a></li>
+          <li class="spa"><a href="#section4">Spa</a></li>
+          <li class="restaurant"><a href="#section5">Réstauration</a></li>
+          <li class="human-capital"><a href="#">Capital Humain</a></li>
+          <li class="contact"><a href="#">Contactez-nous</a></li> 
+        </ul>
+      </nav>
+      <div class="reservationbtn">
+        </div>
+    </div>
+  </header>
+  
+ <body>
+  
+  <section id="section2">
+    <div class="section2-content">
+        <div class="image-content">
+            <div class="slideshow-image-overlay"></div>
+            <img class="slideshow-image" src="css/imageKa/table.jpg" alt="Image 1">
+          </div>
+        
+    </div>
+</section>
+
+  
+  <section class="chambres">
+    <h3 class="selectCHambre"> chambre non disponible </h3>
+    <div id=""></div>
+    <div class="chambre">
+     <p>Nous vous prions de nous excuser pour ce désagrément. La chambre ou le tarif que vous avez choisi n'est pas disponible le
+     Veuillez sélectionner une autre chambre ou un autre tarif.</p><br>
+     <br>
+     <br> <button class="h4"><a href="http://127.0.0.1:5502/kaouthar/indexKaouthar.html"> selectionner une autre chambre ➙</a></button>
+     <!-- <p> 18 avril 2024 - 20 avril 2024 n'est pas disponible.</p>-->
+    </div> 
+  </section>
+
+  
+   <section class="sectionBien">
+    <div class="aller-en-haut">
+      <h3 class="fleche"> RHK HOTEL</h3>
+      <div class="separator1"></div>
+      <h3>Hôtel de luxe, au Maroc</h3>
+      <div class="services">
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-61ag1wlocc6yd3ufd8fvoprt/wifi.svg" alt="WIFI Gratuit">
+          <p class="p1">WIFI Gratuit</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-1am2tbd2xweqr4zqwvhq9azvf/spa.svg" alt="Spa et Salle de Fitness">
+          <p  class="p1" >Spa et Salle de Fitness</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-acksrekzyraj8z7ffzz1t67u7/luggage.svg" alt="Service Conciergerie">
+          <p  class="p1" >Service Conciergerie</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-envmhdlhhcbrwode7hzgizjt8/pool.svg" alt="Piscine">
+          <p  class="p1" >Piscine</p>
+        </div>
+        <div class="service">
+          <img src="https://image-tc.galaxy.tf/wisvg-88frz57oddbeph5poxtkvnih7/shower-in-bath.svg" alt="Salle de bain">
+          <p  class="p1" >Salle de bain </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sectionSuivi">
+    <br>
+    <div class="text-content6"> 
+      <h3>Suivez nous !</h3>
+      <p>Restez connecté avec nous sur les réseaux sociaux pour les dernières mises à jour.</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/rhkhotel/"><i class="fa fa-instagram"></i></a>
+      <a href="https://x.com/AzzouzyHib16510?t=vSrocXFXF713clCOgx3XMQ&s=09"><i class="fa fa-twitter"></i></a>
+      <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+      <di><br></di>
+      <br>
+    </div>
+</section>
+
+
+
+</body>
+</html>

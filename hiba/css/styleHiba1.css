@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: beige ;
+}
+/* FORMULAIRE*/
+.wrapper .form-wrapper  {
+  position: relative;
+  width: 1600px;
+  height: 500px;
+  background: beige;
+  box-shadow: 0 0 50px #A5864A;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 80px; 
+}
+
+.wrapper:hover {
+  animation: animate 1s linear infinite;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.wrapper .form-wrapper.sign-up {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+.wrapper.active .form-wrapper.sign-up {
+  transform: translateY(-450px);
+}
+
+h2 {
+  font-size: 30px;
+  color: #A5864A;
+  text-align: center;
+}
+.input-group {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #A5864A;
+}
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-group input {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: grey;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-group input:focus~label,
+.input-group input:valid~label {
+  top: -5px;
+}
+.remember {
+  margin: -5px 0 15px 5px;
+}
+.remember label {
+  color: grey;
+  font-size: 14px;
+}
+.remember label input {
+  accent-color: #A5864A;
+}
+button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #A5864A;
+  box-shadow: 0 0 10px #A5864A;
+  font-size: 16px;
+  color: beige;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+.signUp-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+.signUp-link p {
+  color: grey;
+}
+.signUp-link p a {
+  color: #A5864A;
+  text-decoration: none;
+  font-weight: 500;
+  font-weight: bold;
+  text-decoration: underline; 
+}
+.signUp-link p a:hover {
+  text-decoration: underline;
+}
+.logo-link::before {
+    content: '';
+    background-image: url('/hiba/css/imagesHiba/pfeLogo.jpeg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    width: 100px; 
+    height: 100px; 
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer; 
+    border-radius: 50%;
+}
+#email-error {
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#password-error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+
+/*BOUTTONS SOCIL MEDIA*/
+.social-buttons {
+  bottom: 80px; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.social-buttons button {
+  display: inline-block;
+  width: 32px; 
+  height: 32px; 
+  border-radius: 50%;
+  background-color: #007bff;
+  background-size: cover; 
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 32px; 
+  left: calc(50% + 100px);
+  bottom: -90px;
+  box-shadow: 0 0 10px #A5864A;
+}
+
+
+.social-buttons button i {
+  font-size: 24px;
+}
+
+.facebook {
+  background-image: url('/hiba/css/imagesHiba/facebookIcone-ConvertImage\ \(1\).jpg'); 
+}
+
+.google {
+  background-image: url('/hiba/css/imagesHiba/googlelogo-ConvertImage.ico'); 
+}
+
+/*logo*/
+
+.login-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url('imagesHiba/WhatsApp-Image-2024-02-15-at-19.12.25-ConvertImage.ico');
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: bottom;
+
+}
+
+.login-icon img {
+  width: 100%; 
+  height: auto; 
+}

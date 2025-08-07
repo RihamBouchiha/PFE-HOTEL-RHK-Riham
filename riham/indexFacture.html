@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/mainFacture.css">
+  <link rel="icon" type="image/png" href="css/imagesRiham1/WhatsApp-Image-2024-02-15-at-19.12.25-ConvertImage.ico">
+  <script defer src="js/mainRiham1.js"></script>
+  <script defer src="js/mainFacture.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>RHK Hôtel</title>
+</head>
+<body>
+
+  <div class="container">
+     <div class="row">
+      <div class="col-md-6">
+        <div class="reservation-section" id="reservationSection">
+              <h2>Votre Réservation</h2>
+              <br>
+              <h3>La Facture</h3>
+              <!-- <ul>
+              <li>Date Arrivée :2024-02-29</li>
+              <li>Date depart :2024-02-29</li>
+              <li> 3 Personnes </li>
+              <li> chambre classique </li></ul> -->
+              <hr class="separator">
+              <h4 class="h_4" >Total-</h4>
+              <h4 class="prix">0,00MAD</h4>
+             
+            </div>
+          </div>
+          <div class="col-md-6">
+      <div class="payment-section">
+          <section class="left-section">
+              <h2>Paiement</h2>
+              <div class="card-logos">
+                <img src="https://banner2.cleanpng.com/20180705/auy/kisspng-visa-debit-card-credit-card-logo-mastercard-supermercado-5b3daa406f9d67.4063706315307679364572.jpg" alt="Visa Logo" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/480px-Mastercard-logo.svg.png" alt="Mastercard Logo" class="card-logo">
+                <img src="https://www.svgrepo.com/show/328122/paypal.svg" alt="Mastercard Logo" class="card-logo">
+                <img src="https://icm.aexp-static.com/acquisition/card-art/NUS000000174_480x304_straight_withname.png" alt="Mastercard Logo" class="card-logo">
+            </div>
+            
+              <form   action="http://localhost:5502/paiements" onsubmit="processPayment()">
+                  <div class="form-group">
+                      <label for="titulaire">Titulaire de la carte<span class="required-star">*</span></label>
+                      <input type="text" class="form-control" id="titulaire" name="titulaire" required>
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="numero-carte">Numéro de la carte<span class="required-star">*</span></label>
+                      <input type="text" class="form-control" id="numero-carte" name="numero-carte" required>
+                  </div>
+  
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="cvv">CVV<span class="required-star">*</span></label>
+                          <input type="text" class="form-control" id="cvv" name="cvv" required>
+                      </div>
+  
+                      <div class="form-group col-md-6">
+                          <label for="validite">Validité de la carte<span class="required-star">*</span></label>
+                          <input type="text" class="form-control" id="validite" name="validite" required>
+                      </div>
+                  </div>
+  
+                  <button type="button" class="btn btn-dark" onclick="processPayment()">Payer</button>
+                </form>
+          </section>
+      </div>
+  </div>
+</div>
+</div>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/mainFacture.js"></script>
+  
+  </body>
+  <footer>
+    <section class="section8">
+      <div class="div-fin">
+        <h2 class="hotel-nom1" id="hotelText">RHK Hotel</h2>
+        <div class="fin">
+          <h5>T°:+212 691743812</h4>
+          <h5>F°:+212 591743812</h4>
+          <h5>E : info @ rhk - hotel . com</h4>
+        </div>
+      </div>
+      <div class="privacy-policy">
+        <p>Politique de confidentialité</p>
+      </div>
+    </section>
+  
+  </footer>
+</html>

@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('/hiba/css/imagesHiba/Pixel_Working_03.jpg');
+    background-size:55% auto; 
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-color: #EAEEF7;
+}
+
+
+.container {
+    width: 400px;
+    margin: 150px auto 40px auto; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: calc(100% - 60px);
+    padding: 12px; 
+    background-color: #070034;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+h2 {
+    text-align: center;
+    color: #070034;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: calc(157% - 192px);
+    padding: 10px;
+    background-color: #070034;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color:#070034;
+}
+.dark-blue {
+    color: #070034; 
+}
+
+
+

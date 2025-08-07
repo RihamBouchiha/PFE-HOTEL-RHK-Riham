@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/hiba/css/imagesHiba/agent.png');
+    background-size: 20% auto;
+    background-repeat: no-repeat;
+    background-position: left bottom 100px;
+    background-color: beige;
+}
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; /* Largeur de la barre rouge */
+    height: 100%; /* Hauteur de la barre rouge (égale à la hauteur de la fenêtre) */
+    background-color:#793900; /* Couleur de la barre rouge */
+    z-index: 9999; /* Assurez-vous que la barre rouge est au-dessus de tout le contenu */
+}
+
+.container {
+    width: 400px;
+    margin: 150px auto 40px auto; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: calc(100% - 60px);
+    padding: 12px; 
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+h2 {
+    text-align: center;
+    color: #793900;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: calc(157% - 192px);
+    padding: 10px;
+    background-color: #793900;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color:#793900;
+}
+.dark-blue {
+    color: #793900; 
+}
+
+
+

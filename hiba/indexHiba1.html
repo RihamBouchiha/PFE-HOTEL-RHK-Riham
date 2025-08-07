@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RHK Hotel</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styleHiba1.css">
+  <link rel="stylesheet" type="text/css" href="css/styleSuite.css">
+  <script src="js/mainHiba1.js" defer></script>
+  <link rel="icon" href="/hiba/css/imagesHiba/WhatsApp-Image-2024-02-15-at-19.12.25-ConvertImage.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="hotel-nom">RHK Hotel</div>
+      <nav>
+        <ul>
+          <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section3">Qui sont RHK?</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section4">Spa</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section5">Réstauration</a></li>
+          <li class="home"><a href="#">Capital Humain</a></li>
+          <li class="home"><a href="#">Contactez-nous</a></li> 
+        </ul>
+      </nav>
+      <div class="reservationbtn"></div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <section>
+        <form action="" onsubmit="return validateForm(event)">
+          <h2>
+            <div class="login-icon"></div>
+            <span style="text-decoration: underline; color: #A5864A;">Login</span>
+           </h2>
+          <div class="input-group">
+            <input type="text" id="email-field" required>
+            <label id="email-label" for="">Email</label>
+            <span id="email-error"></span>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password-field" required>
+            <label id="password-label" for="">Password</label>
+            <span id="password-error"></span>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+          <button onclick="validateForm(event)" type="submit">Login</button>
+
+          <div class="social-buttons"> 
+            <button class="facebook"> 
+              <i class="fab fa-facebook-f"></i> 
+            </button> 
+            <button class="google"> 
+              <i class="fab fa-google"></i> 
+            </button> 
+          </div>
+          <div class="signUp-link">
+            <p>Vous n'avez pas un compte  ? <a href="indexHiba2.html" class="signUpBtn-link">S'inscrire</a></p>
+          </div>
+        </form>
+      </section>
+    </div>
+    
+    <section class="sectionBien">
+
+      <br>
+      <div class="aller-en-haut">
+        <h3 class="fleche">RHK HOTEL</h3>
+        <div class="separator1"></div>
+        <h3>Hôtel de luxe, au Maroc</h3>
+        <div class="services">
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-61ag1wlocc6yd3ufd8fvoprt/wifi.svg" alt="WIFI Gratuit">
+            <p class="p1">WIFI Gratuit</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-1am2tbd2xweqr4zqwvhq9azvf/spa.svg" alt="Spa et Salle de Fitness">
+            <p  class="p1" >Spa et Salle de Fitness</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-acksrekzyraj8z7ffzz1t67u7/luggage.svg" alt="Service Conciergerie">
+            <p  class="p1" >Service Conciergerie</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-envmhdlhhcbrwode7hzgizjt8/pool.svg" alt="Piscine">
+            <p  class="p1" >Piscine</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-870z8zgn1rez41yy9lh4qak1d/guest-service-personnel.svg" alt="Salles de conférence">
+            <p  class="p1" >Salles de conférence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+</body>
+</html>

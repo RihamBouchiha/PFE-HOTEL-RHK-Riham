@@ -1,0 +1,316 @@
+
+.btn-success span {
+  background-color: #28a745; 
+  color: white;
+}
+.btn2 {
+  background-color: #28a745;
+  border-radius: 5px;
+  margin: 2px;
+
+}
+.edit-btn {
+  color:  white;
+  background-color: rgb(113, 113, 156);
+  border: none;
+  border-radius: 11%;
+ padding: 1px 4px;
+}
+/*  */
+.btn-red {
+  color:  white;
+  background-color:#dc3545;
+   border: none;
+   border-radius: 11%;
+   padding: 4px 4px;
+}
+
+
+
+/* Styles pour le formulaire d'ajout de chambre */
+/* Styles pour le formulaire de réservation */
+
+#addEmployeeModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+}
+
+
+.ReservationForm {
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; 
+}
+
+
+.inputResrvation {
+  margin-bottom: 20px;
+}
+
+.inputResrvation span {
+  color: #777;
+  margin-right: 10px;
+}
+
+.inputResrvation label {
+  font-weight: bold;
+}
+
+
+
+/* Styles pour les boutons */
+.btn-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+    /* Style pour le formulaire d'ajout de réservation */
+    #addEmployeeModal .modal-content {
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#addEmployeeModal .modal-body {
+  padding: 20px 0;
+}
+
+#addEmployeeModal input[type="text"],
+#addEmployeeModal input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#addEmployeeModal input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#addEmployeeModal input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#addEmployeeModal .modal-footer {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+#addEmployeeModal .modal-footer button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addEmployeeModal .modal-footer button.cancel {
+  background-color: #ccc;
+  color: #000;
+}
+
+#addEmployeeModal .modal-footer button.cancel:hover {
+  background-color: #999;
+}
+
+#addEmployeeModal .modal-footer button.submit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#addEmployeeModal .modal-footer button.submit:hover {
+  background-color: #45a049;
+}
+
+/* modifier  */
+#editChambreModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: auto;
+}
+
+#editChambreModal .modal-dialog {
+  margin: 50px auto;
+  max-width: 30%;
+}
+
+#editChambreModal .modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+}
+
+#editChambreModal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#editChambreModal .close:hover,
+#editChambreModal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#editChambreModal h2 {
+  margin-bottom: 20px;
+}
+
+#editChambreModal label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#editChambreModal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#editChambreModal button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#editChambreModal button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.close{
+    background-color: white;
+    border: none;
+}
+/* Style pour le modal de confirmation */
+#confirmationModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: auto;
+}
+
+#confirmationModal .modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+}
+
+#confirmationModal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#confirmationModal .close:hover,
+#confirmationModal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#confirmationModal h2 {
+  margin-bottom: 20px;
+}
+
+#confirmationModal p {
+  margin-bottom: 20px;
+}
+
+#confirmationModal button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmationModal button#confirmDelete {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#confirmationModal button#confirmDelete:hover {
+  background-color: #45a049;
+}
+
+#confirmationModal button#cancelDelete {
+  background-color: #ccc;
+  color: #000;
+  
+}
+
+#confirmationModal button#cancelDelete:hover {
+  background-color: #999;
+}
+

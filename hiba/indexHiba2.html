@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login & Registration Form | Codehal</title>
+  <link rel="stylesheet" type="text/css" href="css/styleHiba2.css">
+  <link rel="stylesheet" type="text/css" href="css/styleSuite.css">
+  <script src="js/mainHiba2.js" defer></script>
+  <link rel="icon" href="/hiba/css/imagesHiba/WhatsApp-Image-2024-02-15-at-19.12.25-ConvertImage.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="hotel-nom">RHK Hotel</div>
+      <nav>
+        <ul>
+          <li class="home"><a href="http://127.0.0.1:5502/riham/indexRiham1.html">Accueil</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section3">Qui sont RHK?</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section4">Spa</a></li>
+          <li class="home"><a href="/riham/indexRiham1.html#section5">Réstauration</a></li>
+          <li class="home"><a href="#">Capital Humain</a></li>
+          <li class="home"><a href="#">Contactez-nous</a></li> 
+        </ul>
+      </nav>
+      <div class="reservationbtn"></div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <form action="http://localhost:5502/clients" method="post" id="formul" onsubmit="validateForm(event)">
+
+        <h2><div class="login-icon"></div><span style="text-decoration: underline; color: #A5864A;">Inscription</span></h2>
+       
+        <div class="name-field">
+         <div class="input-group">
+           <input type="text" id="nom-fieldd" name="nom_fieldd"required>
+           <label id="label-nom" for="">nom</label>
+           <span id="name-error"></span>
+         </div>
+         <div class="input-group">
+            <input id="prenom-fieldd" name="prenom_fieldd" type="text" required>
+            <label id="label-prenom" for="">prenom</label>
+            <span id="prenom-error"></span>
+          </div>
+        </div> 
+        
+        <div class="mail-field">
+          <div class="input-group">
+            <input id="mail-fieldd" name="mail_fieldd"type="text" required>
+            <label id="label-mail" for="">adresse_email</label>
+            <span id="mail-error"></span>
+          </div>
+
+         <div class="input-group">
+          <input id="tel-fieldd" name="tel_fieldd" type="text" required>
+          <label id="label-tel" for="">numero_telephone</label>
+          <span id="tel-error"></span>
+         </div>
+        </div>
+        <div class = "local-field">
+          <div class="input-group">
+               <input type="text" name="pays"required id="pays">
+               <label for="">pays</label>
+           </div>
+           
+          <div class="input-group">
+              <input type="text" name="ville"required id="ville">
+              <label for="">ville</label>
+          </div>
+      </div>
+      <div class = "securite-field">
+        <div class="input-group">
+          <input id="pass_fieldd" name="pass_fieldd"type="password" required id="mot_de_passe">
+          <label id="pass_label" for="">mot de passe</label>
+      
+          <span id="pass_error"></span>
+      </div>
+      <div class="input-group">
+        <input id="conf-pass_fieldd" name="conf-pass_fieldd" type="password" required>
+        <label id="conf-pass_label" class="error-label" for="">Confirmer mot de passe</label>
+        <span id="conf-pass_error" class="error"></span>
+    </div>
+    
+        
+        </div>
+       
+        
+         <div class="remember">
+          <label><input type="checkbox" required><a href="http://127.0.0.1:5502/riham/indexRiham2.html" style="color: grey">J'accepte tous le règlement Politique et confidentialité *</a></label>
+         </div>
+        <button onclick="validateForm()"  type="submit">S'inscrire</button>
+      
+         <div class="signUp-link">
+          <p>Vous avez déjà un compte ! <a href="indexHiba1.html" class="signUpBtn-link">Se connecter</a></p>
+         </div>
+       </form>
+    </div>
+    <section class="sectionBien">
+
+      <br>
+      <div class="aller-en-haut">
+        <h3 class="fleche">RHK HOTEL</h3>
+        <div class="separator1"></div>
+        <h3>Hôtel de luxe, au Maroc</h3>
+        <div class="services">
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-61ag1wlocc6yd3ufd8fvoprt/wifi.svg" alt="WIFI Gratuit">
+            <p class="p1">WIFI Gratuit</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-1am2tbd2xweqr4zqwvhq9azvf/spa.svg" alt="Spa et Salle de Fitness">
+            <p  class="p1" >Spa et Salle de Fitness</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-acksrekzyraj8z7ffzz1t67u7/luggage.svg" alt="Service Conciergerie">
+            <p  class="p1" >Service Conciergerie</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-envmhdlhhcbrwode7hzgizjt8/pool.svg" alt="Piscine">
+            <p  class="p1" >Piscine</p>
+          </div>
+          <div class="service">
+            <img src="https://image-tc.galaxy.tf/wisvg-870z8zgn1rez41yy9lh4qak1d/guest-service-personnel.svg" alt="Salles de conférence">
+            <p  class="p1" >Salles de conférence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   </div>
+   </body>
+   </html>
+   

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/hiba/css/styleAdmin_table.css">
+    <link rel="stylesheet" href="/hiba/css/stylemenu.css">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="business" role="img" class="md hydrated" aria-label="business"></ion-icon> </span>
+                    <span class="title">RHK hotel</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://127.0.0.1:5502/riham/indexSuperviseur.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon>
+                    </span>
+                    <span class="title">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5502/hiba/Graphe.html">
+                    <span class="icon">
+                        <i class="fas fa-chart-bar"></i> <!-- Utilisez l'icône de graphe à barres -->
+                    </span>
+                    <span class="title">Graphe</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5502/kaouthar/indexAdmin.html">
+                    <span class="icon">
+                        <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>                        </span>
+                    <span class="title">Gestion des réservations</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://127.0.0.1:5502/kaouthar/indexChambreAdmin.html">
+                    <span class="icon">
+                        <ion-icon name="bed-outline" role="img" class="md hydrated" aria-label="bed outline"></ion-icon>
+                    </span>
+                    <span class="title">Gestion des chambres</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://127.0.0.1:5502/kaouthar/indexSalleAdmin.html">
+                    <span class="icon">
+                        <ion-icon name="briefcase-outline"></ion-icon></span>
+                    <span class="title">Gestion des salles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5502/hiba/TABLEADMIN.HTML">
+                    <span class="icon">
+                        <ion-icon name="restaurant-outline" role="img" class="md hydrated" aria-label="restaurant outline"></ion-icon>                        </span>
+                    <span class="title">Gestion des tables</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5502/kaouthar/dispo.html">
+                    <span class="icon">
+                        <ion-icon name="calendar"></ion-icon> </span>
+                    <span class="title">Disponibilité</span>
+                </a>
+            </li>        
+        </ul>
+    </div>
+
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
+        <div class="search">
+            <label>
+                <br>
+                <input type="text" id="searchInput" onkeyup="search()" placeholder="recherche... ">
+            </label>
+        </div>
+
+        <div class="user">
+            <img src="css/imagesRiham1/admin.avif" alt="">
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="main-content">
+    <div class="main-content">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <button class="btn btn-success btn-custom">
+                    <a href="#addEmployeeModal" class="text-white" data-toggle="modal">
+                        <span style="background-color: #28a745; border-radius: 5px;">Ajouter nouvelle reservation table <i class="material-icons"></i></span>
+                    </a>
+                </button>
+                
+                <div class="row">
+                    <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
+                       <h2 class="ml-lg-2">Gestion des reservation table  </h2>
+                    </div>
+                    
+                </div>
+                
+              </div>
+           
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                    <th>
+                    </th>
+                 
+                    <th>id Réservation table</th>
+                    <th>heure début</th>
+                    <th>heure fin</th>
+                    <th>Jour</th>
+                    <th>Type</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+                
+                <tbody id="reservationTableBody"><tr>
+    <td><span class="custom-checkbox">
+        <input type="checkbox" id="checkbox6" name="option[]" value="6">
+        <label for="checkbox6"></label></span>
+
+    <button class="delete-btn btn-red" data-toggle="modal" data-tooltip="tooltip" title="Delete">
+    <i class="material-icons"></i>
+</button>
+</td>
+<td>
+<button class="edit-btn" data-toggle="modal" data-tooltip="tooltip" title="Edit">
+<i class="material-icons"></i>
+</button>
+</td>
+</tr><tr>
+    <td><span class="custom-checkbox">
+        <input type="checkbox" id="checkbox7" name="option[]" value="7">
+        <label for="checkbox7"></label></span>
+    </td>
+    <td>7</td>
+    <td>2</td>
+    <td>1</td>
+    <td>double</td>
+    <td>null</td>
+ 
+    <td>
+    <button class="delete-btn btn-red" data-toggle="modal" data-tooltip="tooltip" title="Delete">
+    <i class="material-icons"></i>
+</button>
+</td>
+<td>
+<button class="edit-btn" data-toggle="modal" data-tooltip="tooltip" title="Edit">
+<i class="material-icons"></i>
+</button>
+</td>
+</tr><tr>
+    <td><span class="custom-checkbox">
+        <input type="checkbox" id="checkbox10" name="option[]" value="10">
+        <label for="checkbox10"></label></span>
+    </td>
+    <td>10</td>
+    <td>12</td>
+    <td>2</td>
+    <td>INTERIEUR</td>
+    <td>4000</td>
+ 
+    <td>
+    <button class="delete-btn btn-red" data-toggle="modal" data-tooltip="tooltip" title="Delete">
+    <i class="material-icons"></i>
+</button>
+</td>
+<td>
+<button class="edit-btn" data-toggle="modal" data-tooltip="tooltip" title="Edit">
+<i class="material-icons"></i>
+</button>
+</td>
+</tr></tbody>
+            </table>
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="ml-lg-2"></h2>
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  
+            <!-- Ajoutez le formulaire dans votre HTML -->
+<div id="addEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form onsubmit="submitForm(event)">
+         
+                <div class="modal-header">						
+                    <h4 class="modal-title">Ajouter une nouvelle réservation table </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">					
+                    <div class="form-group">
+                        <label>Date et heure de début</label>
+                        <input type="" class="form-control" id="date_heure_debut" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date et heure de fin</label>
+                        <input type="" class="form-control" id="date_heure_fin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jour</label>
+                        <input type="text" class="form-control" id="jour" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" class="form-control" id="type" required>
+                    </div>					
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Annuler">
+                    <input type="submit" class="btn btn-success" id="r"value="Ajouter">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+ <!-- Formulaire de modification de chambre g-->
+ <div id="editChambreModal" class="modal">
+    <div clas s="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" aria-hidden="true">&times;</button>
+            <h2>Modifier une réservation table</h2>
+            <form id="editChambreForm">
+                <label for="edit_id_chambre"></label>
+                <input type="hidden" id="edit_id_chambre" name="id_chambre" value="">
+                <label for="edit_capacite">Date et heure de début</label>
+                <input type="text" id="edit_capacite" name="capacite" required>
+                <label for="edit_disponibilite">Date et heure de fin</label>
+                <input type="text" id="edit_disponibilite" name="disponibilite" required>
+                <label for="edit_type">jour:</label>
+                <input type="text" id="edit_type" name="type" required>
+                <label for="edit_prix">type:</label>
+                <input type="text" id="edit_prix" name="prix" required>
+                <button type="submit" id="modifierCHambre">Modifier</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+        </div>
+            
+    <!-- Utilisation du script Bootstrap 4 et Font Awesome -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script defer src="/hiba/js/mainAdmin.js"></script>
+    <script defer src="js/app.js"></script>
+
+    <script>
+        function search() {
+            var input = document.getElementById('searchInput').value.toUpperCase();
+            var table = document.getElementById('reservationTableBody');
+            var rows = table.getElementsByTagName('tr');
+
+            for (var i = 0; i < rows.length; i++) {
+                var rowData = rows[i].getElementsByTagName('td');
+                var found = false;
+               for (var j = 0; j < rowData.length; j++) {
+                    if (rowData[j].textContent.toUpperCase().indexOf(input) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+/*html{
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 1.5s;
+}*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Advent Pro', Arial, sans-serif; 
+    overflow-x: hidden;
+    
+    
+}
+
+
+/*la barre*/
+header {
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
+    color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    width: 97.8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header.scrolled-down {
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    color: #000; 
+    padding: 11px;
+    width: 99.4%;
+
+}
+nav ul li a.scrolled-down {
+    color: #000; 
+}
+.reservationbtn a.scrolled-down {
+    background-color: #000; 
+    color: #fff; 
+    border-color: #daaa3ad6; 
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.hotel-nom {
+    font-size: 1.8em;
+    font-family: Gabriola; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2em; 
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff1f1;
+    transition: width 0.5s ease;
+    
+}
+.scrolled-down nav ul li a::after {
+    background-color: #000; /* Changer la couleur du trait en noir */
+}
+
+
+nav ul li:hover a::after {
+    width: 100%;
+}
+
+
+
+.reservationbtn a {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 2s ease;
+}
+
+.reservationbtn a:hover {
+    background-color: #daaa3ad6;
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+body.scrolled {
+    margin-top: 70px;
+}
+
+#section2 {
+    background: none;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.image-content {
+    flex: 1;
+    overflow: hidden;
+}
+.slideshow-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 2s ease;
+}
+.slideshow-image-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajustez l'opacité selon vos préférences */
+    z-index: 2;
+}
+
+
+
+section {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/*qui sont rhk*/
+#section3 {
+    background: linear-gradient(to right, #9d7b2a, white);
+    padding: 90px 0; 
+}
+
+
+.section3-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Ajoutez ces styles à votre fichier CSS pour gérer le fondu */
+.image-content-section4 img {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+
+.text-content3 {
+    flex: 1;
+    padding-left: 80px; 
+}
+
+.image-content {
+    flex: 0.9;
+    padding-right: 120px; 
+    border-right: 3px solid #a88534; 
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+/*spa*/
+#section4 {
+    background-color: #ebe6cb;
+    padding: 90px 0; 
+}
+
+.section4-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.image-content-section4 {
+    flex: 1;
+    padding-left: 20px; 
+    order: 2;
+}
+
+.image-content-section4 img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 3s ease;
+}
+
+.image-content-section4 img.fade-out {
+    opacity: 0;
+}
+
+
+
+.text-content4 {
+    flex: 1;
+    padding-right: 20px; 
+    order: 1; 
+}
+
+.text-content4 h2 {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+}
+
+.text-content4 p {
+    font-size: 1.2em; 
+    line-height: 1.5; 
+}
+.decouvrezplus-spa{
+    font-weight: bold;
+    text-decoration: underline;
+    transition:0.5s; 
+}
+.decouvrezplus-spa:hover{
+    color: #a88534;
+
+}
+
+
+
+
+/*restauration*/
+#section5 {
+    background-color: #ebe6cb;
+    padding: 90px 0; 
+}
+.text-content5 {
+    flex: 1;
+    padding-left: 80px; 
+}
+
+.section5-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content-section5 {
+    flex: 1;
+    padding-right: 200px; 
+    padding-left: 20px; 
+    text-align: left;
+}
+
+.image-content-section5 {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px; 
+    text-align: left; 
+}
+
+.image-content-section5 img {
+    max-width: 100%;
+    height: auto;
+}
+.decouvrezplus-restauration {
+    font-weight: bold;
+    text-decoration: underline;
+    transition:0.5s;
+}
+
+.decouvrezplus-restauration:hover{
+    color: #a88534; 
+}
+
+/*section6*/
+.section6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-content6 {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.text-content6 h2 {
+    color: #000000; 
+    font-family: 'italic', serif; 
+}
+.social-icons {
+    width: 100%;
+    text-align:center;  
+}
+.social-icons a{
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.3em;
+    color: #000000;
+}
+.social-icons a:hover{
+    transform: scale(1.5);
+    transition: 0.9s;
+}
+.section8 {
+    background-color: #292727;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 35vh;
+}
+
+.div-fin {
+    text-align: center;
+    flex: 1; 
+    margin-left: 160px; 
+}
+
+
+.fin h4 {
+    transition: 0.3s;
+}
+
+.fin h4:hover {
+    color: #a88534;
+}
+
+.privacy-policy {
+    text-align: right;
+    margin-right: 20px;
+    margin-top:-15%; 
+}
+
+.privacy-policy p {
+    margin: 0;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.privacy-policy p:hover {
+    color: #a88534;
+}
+.privacy-policy {
+    cursor: pointer;
+}
+
+
+#hotelText {
+    cursor: pointer;
+}
+
+
+
+.hotel-nom1 {
+    color: #e8e7dc;
+    font-size: 1.8em;
+    font-family: Gabriola;
+}
+
+.fin {
+    color: #d1cdb7ca;
+}
+.position-relative {
+    position: relative;
+  }
+  
+  .section2-header {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .section2-header h1 {
+    font-size: 2em;
+  }
+  
+  .section2-header p {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  
+  
+
+.aller-en-haut{
+    text-align: center;
+    
+}
+.fleche {
+    font-size: 2em;
+    animation: monterDescendre 1s infinite alternate;
+}
+.aller-en-haut {
+    cursor: pointer;
+}
+
+@keyframes monterDescendre {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}

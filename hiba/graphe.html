@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphique des réservations par période</title>
+  <!-- Inclure la bibliothèque Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Inclure le CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #reservationChart {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    
+  <h1>Graphique des réservations par période</h1>
+
+  <!-- Canevas pour le graphique -->
+  <canvas id="reservationChart" width="800" height="400"></canvas>
+
+  <!-- Bouton Bootstrap pour revenir à la page précédente -->
+  <div class="container">
+    <a href="javascript:history.go(-1)" class="btn btn-primary">Gestion des réservations Tables</a>
+  </div>
+
+  <!-- Script pour récupérer et afficher les données -->
+  <script>
+   fetch('http://localhost:5502/reservation_tables')
+  .then(response => response.json())
+  .then(data => {
+    // Extraire les données pour les labels et les données du graphique
+    const labels = data.labels || [];
+    const reservationsData = data.data || [];
+
+    // Créer le graphique
+    const ctx = document.getElementById('reservationChart').getContext('2d');
+    const reservationChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Nombre de réservations par période',
+          data: reservationsData,
+          backgroundColor: [
+          "rgba(64, 162, 235, 1)",
+          "rgba(255, 99, 132, 1)",
+          "rgba(255, 206, 86, 1)",
+          ],
+          borderColor: [
+          "rgba(64, 162, 235, 1)",
+          "rgba(255, 99, 132, 1)",
+          "rgba(255, 206, 86, 1)",
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              precision: 0 // Afficher uniquement des entiers sur l'axe Y
+            }
+          }]
+        }
+      }
+    });
+  })
+  .catch(error => console.error('Erreur lors de la récupération des données:', error));
+  </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: beige ;
+}
+.wrapper .form-wrapper{
+  position: relative;
+  width: 1600px;
+  height: 650px;
+  background: beige;
+  box-shadow: 0 0 50px #A5864A;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 80px; 
+}
+.wrapper:hover {
+  animation: animate 1s linear infinite;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.wrapper .form-wrapper.sign-up {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+.wrapper.active .form-wrapper.sign-up {
+  transform: translateY(-450px);
+}
+h2 {
+  font-size: 30px;
+  color: #A5864A;
+  text-align: center;
+}
+.input-group {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #A5864A;
+}
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-group input {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: grey;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-group input:focus~label,
+.input-group input:valid~label {
+  top: -5px;
+}
+.remember {
+  margin: -5px 0 15px 5px;
+}
+.remember label {
+  color: grey;
+  font-size: 14px;
+}
+.remember label input {
+  accent-color: #A5864A;
+}
+button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #A5864A;
+  box-shadow: 0 0 10px #A5864A;
+  font-size: 16px;
+  color: beige;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+.signUp-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+.signUp-link p {
+  color: grey;
+}
+.signUp-link p a {
+  color: #A5864A;
+  text-decoration: none;
+  font-weight: 500;
+  font-weight: bold;
+  text-decoration: underline; 
+}
+.signUp-link p a:hover {
+  text-decoration: underline;
+}
+.logo-link::before {
+    content: '';
+    background-image: url('/hiba/css/imagesHiba/pfeLogo.jpeg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    width: 100px; 
+    height: 100px; 
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer; 
+    border-radius: 50%;
+}
+.name-field{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+.name-field div {
+    display: flex;
+    flex-direction: column;
+}
+.name-field div {
+    width: 49%;
+}
+.mail-field{
+    display: flex;
+     width:100%;
+    justify-content: space-between;
+}
+
+.mail-field div{
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-field div {
+    width: 49%;
+}  
+.local-field {
+    display: flex;
+     width:100%;
+    justify-content: space-between;
+}
+
+.local-field div{
+    display: flex;
+    flex-direction: column;
+}
+
+.local-field div {
+    width: 49%;
+}  
+.securite-field {
+    display: flex;
+     width:100%;
+    justify-content: space-between;
+}
+
+.securite-field div{
+    display: flex;
+    flex-direction: column;
+}
+
+.securite-field div {
+    width: 49%;
+}  
+
+#name-error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#prenom-error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#mail-error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#tel-error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#pass_error{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+#error_passConf{
+  position: absolute;
+  bottom: -20px; 
+  left: 5px;
+  font-size: 14px;
+  color: red; 
+}
+/*la barre*/
+header {
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
+    color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    width: 97.8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header.scrolled-down {
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    color: #000; 
+    padding: 5px;
+    width: 99.4%;
+
+}
+nav ul li a.scrolled-down {
+    color: #000; 
+}
+.reservationbtn a.scrolled-down {
+    background-color: #000; 
+    color: #fff; 
+    border-color: #daaa3ad6; 
+}
+.home a{
+  color: #fff; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.hotel-nom  {
+    font-size: 1.8em;
+    font-family: Gabriola; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2em; 
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff1f1;
+    transition: width 0.5s ease;
+    
+}
+.scrolled-down nav ul li a::after {
+    background-color: #000; 
+}
+
+
+nav ul li:hover a::after {
+    width: 100%;
+}
+
+/*logo*/
+
+.login-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url('imagesHiba/WhatsApp-Image-2024-02-15-at-19.12.25-ConvertImage.ico');
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: bottom;
+
+}
+
+.login-icon img {
+  width: 100%; 
+  height: auto; 
+}
+
+.error-label {
+  color: red;
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+html{
+
+}
+
+.ligne {
+    width: 5%;
+    margin: 0 0 0 0; /* top right bottom left */
+    border: 1px solid #000000d6;
+    font-weight: bold;
+}
+.sous-titre{
+    color:#a88534 ;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.politique{
+    font-family: 'Big Caslon', serif; 
+}
+.Protection{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.donnee {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s;
+}
+
+.donnee:hover {
+    color: #a88534;
+}
+.acc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s;
+}
+
+.acc:hover {
+    color: #a88534;
+    cursor: pointer;
+    
+}
+
+.h5{
+    font-family:serif
+}
+.header{
+    margin: 120px; ;
+}
+.hotel-nom1 {
+    color: #e8e7dc;
+    font-size: 1.8em;
+    font-family: Gabriola;
+}
+
+
+.section8 {
+    background-color: #292727;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 35vh;
+}
+.div-fin {
+    text-align: center;
+    flex: 1; 
+    margin-left: 50px; 
+}
+.fin h4 {
+    transition: 0.3s;
+}
+
+.fin h4:hover {
+    color: #a88534;
+}
+.fin {
+    color: #d1cdb7ca;
+}

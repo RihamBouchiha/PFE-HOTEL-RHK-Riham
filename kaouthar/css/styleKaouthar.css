@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+/* reservation */
+
+.header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/*  */
+:root {
+  --primary-color: #c0873ce9;
+  --primary-color-dark: #c0873ce9;
+  --text-dark: #0c0a09;
+  --text-light: #78716c;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 7rem 0rem;
+}
+
+#section2 {
+  background: none;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 410px;
+}
+.image-content {
+  flex: 1;
+  overflow: hidden;
+}
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 2s ease;
+}
+.slideshow-image-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 2;
+}
+
+.ReservationSection {
+  padding-block: 0;
+}
+
+
+.ReservationForm {
+  padding: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border: 1px solid #000000e9;
+  border-radius: 0px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+
+.ui-datepicker {
+  font-size: 1.2em;
+  width: 700px;
+}
+
+.virification{
+ text-align: center;
+}
+ 
+  .inputResrvation input {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .inputResrvation input::placeholder {
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+  }
+  
+ 
+  .inputResrvation:not(:last-child) {
+    border-right: 1px solid #c0873ce9; 
+    padding-right: 1rem; 
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .inputResrvation {
+    font-family: "Poppins", sans-serif;
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .inputResrvation span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+  }
+  
+  .inputResrvation label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  
+  .inputResrvation select {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    background-color: transparent; /* Ajout de cette ligne pour rendre le fond transparent */
+  }
+  
+  .inputResrvation select::placeholder {
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .inputResrvation:not(:last-child) {
+    border-right: 1px solid #c0873ce9;
+    padding-right: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+
+  /* CHAMBRE  */
+
+  .chambre {
+    display: flex;
+    margin: 50px;
+    border: 1.5px solid #c3c2c2; 
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .selectCHambre {
+    margin: 45px auto; 
+    color: #c0873ce9;
+    text-decoration: underline;
+    text-decoration-color: #000000e9;
+    text-align: center; 
+    font-size: 27px; 
+}
+  .chambre img {
+    margin: 30px;
+    width: 250px;
+    height: 180px;
+    border-radius: 0px 0 0 0px; 
+    margin-right: 20px;
+  }
+  
+  .infos {
+    flex: 1;
+    padding: 2px; 
+    margin: 5px;
+     font-family: "Poppins", sans-serif;
+  }
+
+  .infos h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1px;
+    color: #a59c95;
+  }
+
+  li{
+    font-size: 0.9rem;
+    margin-bottom: 1px;
+    color: #a59c95;
+  }
+  
+  .h4 {
+    border: none;
+    background-color: white;
+    font-size: 1rem;
+    color: #020202e9;
+    text-decoration: underline;
+     text-decoration-color: #c0873ce9;
+  }
+
+  .h_4{
+
+    font-size: 0.8rem;
+    color: #020202e9;
+    text-decoration: underline;
+     text-decoration-color: #c0873ce9;
+
+  }
+  .separator {
+    border: none;
+    border-top: 1px solid #ccc; 
+    margin: 9px 0; 
+  }
+
+  
+  .infos p {
+    margin: 5px 0;
+  }
+
+  .align-right {
+    padding: 0.8rem 28rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+  }
+  
+  
+  .btn {
+    padding: 0.4rem 1.4rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn{
+    text-align: right;
+  }
+  .btn:hover {
+    background-color: #715a25d6;
+  }
+  
+  .virification{
+    color: red;
+  }
+
+  .reste{
+    color: rgb(236, 109, 109);
+  }
+
+  /* section1 */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+ 
+}

@@ -1,0 +1,606 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #070034;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+/* ===================== Main ===================== */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--black2);
+}
+
+.search label ion-icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+
+.table-wrapper {
+  background-color: #fff;
+  margin:15px 30px 40px 0px;
+  width: 100%;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.table-title{
+  background: var(--blue);
+  color:#fff;
+  position:sticky;
+  top:0;
+  width:100%;
+  left:0;
+  padding:10px 30px;
+  border-radius:5px 5px 0 0;
+}
+.table-title h2{
+  margin:5px 0  0;
+  font-size:17px;
+}
+.table-title .btn-group{
+  float:right;
+}
+.table-title .btn{
+  color:var(--white);
+  /*float:right;*/
+  font-size:14px;
+  border:none;
+  min-width:50px;
+  border-radius:3px;
+  border:none;
+  outline:none!important;
+  margin-left:10px;
+}
+.table-title .btn i{
+  float:left;
+  font-size:21px;
+  margin-right:15px;
+}
+
+.table-title .btn span{
+  float:left;
+  margin-top:2px;
+}
+table.table tr th, table.table tr td{
+  border-color:#e9e9e9;
+  padding:8px 15px;
+  font-size:14px;
+  font-weight: 400;
+  vertical-align:middle;
+}
+
+table.table tr th:first-child{
+  width:60px;
+}
+
+table.table tr th:last-child{
+  width:100px;
+}
+
+table.table-stripped tbody tr:nth-of-type(odd){
+  background-color:#fcfcfc;
+}
+
+table.table-stripped.table-hover tbody tr:hover{
+  background-color:#f5f5f5;
+}
+
+table.table tr th:nth-child(2),
+table.table tr th:nth-child(3),
+table.table tr th:nth-child(4),
+table.table tr th:nth-child(5),
+table.table tr th:nth-child(6),
+table.table tr td:nth-child(2),
+table.table tr td:nth-child(3),
+table.table tr td:nth-child(4),
+table.table tr td:nth-child(5),
+table.table tr td:nth-child(6) {
+    padding-right: 180px; 
+}
+
+table.table tr th:nth-child(7),
+table.table tr th:nth-child(8),
+table.table tr td:nth-child(7),
+table.table tr td:nth-child(8) {
+    padding-right: 10px;
+}
+
+
+
+
+table.table th i{
+  font-size:17px;
+  margin: 6px 5px;
+  cursor:pointer;
+}
+
+table.table td:last-child{
+  opacity:0.9;
+  font-size:22px;
+  margin:0px 5px;
+}
+
+.edit{
+ color:#FFC107;
+}
+
+.delete{
+  color:#F44336;
+}
+
+table.table td  i{
+  font-size:19px;
+}
+
+  table.table .avatar{
+    border-radius:50%;
+    vertical-align:middle;
+    margin-right:10px;
+  }
+  
+  .pagination{
+    float:right;
+    margin:0 0 5px;
+  }
+  .pagination  li a{
+    border:none;
+    font-size:13px;
+    min-width:30px;
+    min-height:30px;
+    color:#999;
+    margin:0 2px;
+    line-height:30px;
+    border-radius:2px!important;
+    text-align:center;
+    padding:0 6px;
+  }
+  
+  .pagination  li a:hover{
+    color:#666;
+  }
+  .pagination li.disabled i{
+    color:#ccc;
+    
+  }
+  
+  .pagination li i{
+    font-size:16px;
+    padding-top:6px;
+  }
+  
+  .hint-text{
+    float:left;
+    margin-top:10px;
+    font-size:13px;
+  }
+  
+  .custom-checkbox{
+    position:relative;
+  }
+  
+  
+  .custom-checkbox input[type="checkbox"]{
+    opacity:0;
+    position:absolute;
+    margin:5px 0 0  3px;
+    z-index:9;
+  }
+  
+  
+  .custom-checkbox label:before{
+    width:18px;
+    height:18px;
+  }
+  .custom-checkbox label:before{
+    content:"";
+    margin-right:10px;
+    display:inline-block;
+    vertical-align:text-top;
+      background-color:#fff;
+      border:1px solid #bbb;
+      border-radius:2px;
+      box-sizing:border-box;
+      z-index:2;
+  }
+  
+  
+  .custom-checkbox input[type="checkbox"]:checked + label:after{
+    content:"";
+    position:absolute;
+    left:6px;
+    top:3px;
+    width:6px;
+    height:11px;
+    border:solid #000;
+    border-width:0 3px 3px 0;
+    transform:inherit;
+    z-index:3;
+    transform:rotatez(45deg);
+  }
+
+
+
+
+
+
+.btn-success span {
+background-color: #28a745; 
+color: white;
+}
+.btn {
+background-color: #28a745;
+border-radius: 5px;
+margin: 0px;
+
+}
+.edit-btn {
+color:  white;
+background-color: rgb(113, 113, 156);
+border: none;
+border-radius: 11%;
+padding: 1px 4px;
+}
+.btn-red {
+color:  white;
+background-color:#dc3545;
+border: none;
+border-radius: 11%;
+padding: 4px 4px;
+}
+
+/* Style pour le formulaire d'ajout de réservation */
+#addEmployeeModal .modal-content {
+padding: 800px;
+width: 200%;
+max-width: 600px;
+border-radius: 25px; 
+box-shadow: 20 50 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+#addEmployeeModal .modal-content {
+padding: 70px;
+width: 90%; 
+max-width: 500px; 
+}
+
+#addEmployeeModal .form-group {
+padding: 6px;
+}
+
+#addEmployeeModal input[type="text"] {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+#addEmployeeModal input[type="submit"] {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 4px;
+background-color: #28a745;
+color: #fff;
+cursor: pointer;
+}
+
+
+#addEmployeeModal input[type="submit"]:hover {
+background-color: #218838;
+}
+
+#addEmployeeModal .modal-footer {
+padding-top: 90px;
+border-top: 1px solid #ccc;
+}
+
+#addEmployeeModal .modal-footer input[type="button"] {
+margin-right: 70px;
+background-color: #6c757d;
+}
+
+#addEmployeeModal .modal-footer input[type="button"]:hover {
+background-color: #5a6268;
+}
+#addEmployeeModal {
+display: none;
+}
+#addEmployeeModal {
+display: none;
+position: fixed;
+left: 0;
+width: 100%;
+height: 100%; 
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 9999;
+overflow-y: auto; 
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 2% auto;
+padding: 80px;
+border: 2px solid #888;
+width: 90%;
+}
+.separator-row td {
+    border-top: 3px solid #000000;
+}
+
+
+.titre1{
+color: white;
+background-color: #333;
+padding: 0.01px;
+}
+.ml-lg-2{
+margin: 10px;
+}
+
+/*style pour le bouton de fereture*/
+.btn-close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 45px;
+  color: #e9e9e9;
+}
+.h4, h4 {
+  font-size: 1.5rem;
+}
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+
+.btn-primary {
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 17px; /* Taille du texte de 14px */
+
+  border: none; /* Supprime la bordure */
+  margin-top: 15px; /* Ajoute une marge supérieure de 10px */
+}
+
+.btn-sm {
+  font-size: 7px; /* Taille du texte de 14px */
+}
+.btn-customm {
+  width: 20%;
+  padding: 8px;
+  font-size: 15px; /* Taille du bouton à 30px */
+  color: #000000;
+  border-radius: 0,2;
+  background-color: #808080; /* Couleur gris */
+  border: none; /* Supprime la bordure */
+  margin-top: 10px; /* Ajoute une marge supérieure de 10px */
+}
+/* Style pour les lignes impaires */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+/* Style pour les lignes paires */
+.table-striped tbody tr:nth-child(even) {
+  background-color: rgba(155, 155, 155, 0.436);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
